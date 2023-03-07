@@ -1,11 +1,15 @@
 package br.com.ewertoncorporation.boloscaseiros.model;
 
+import java.sql.Date;
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import lombok.*;
 
@@ -13,15 +17,17 @@ import lombok.*;
 @Setter
 @Entity
 
-public class Cliente {
+public class UnidadeMedida {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
-    private Long cliente_id;
+    private Long unidade_medida_id;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "cliente_user_fk")
-    private User user;
+    @Column(nullable = false)
+    private String unidade_medida_nome;
+
+
+
     
 }

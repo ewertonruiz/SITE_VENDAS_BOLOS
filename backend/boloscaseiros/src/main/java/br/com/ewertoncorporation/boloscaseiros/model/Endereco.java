@@ -13,15 +13,27 @@ import lombok.*;
 @Setter
 @Entity
 
-public class Cliente {
+public class Endereco {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
-    private Long cliente_id;
+    private Long endereco_id;
+
+    @Column(nullable = false, updatable = false)
+    private String endereco_logradouro;
+
+    @Column(nullable = false, updatable = false)
+    private String endereco_bairro;
+
+    @Column(nullable = false, updatable = false)
+    private Integer endereco_numero;
+
+    @Column(nullable = false, updatable = false)
+    private String endereco_complemento;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "cliente_user_fk")
+    @JoinColumn(name = "endereco_user_fk")
     private User user;
     
 }

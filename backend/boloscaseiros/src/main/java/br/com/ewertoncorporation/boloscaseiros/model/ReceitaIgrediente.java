@@ -13,15 +13,24 @@ import lombok.*;
 @Setter
 @Entity
 
-public class Cliente {
+public class ReceitaIgrediente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
-    private Long cliente_id;
+    private Long receita_igrediente_id;
+
+    @Column(nullable = false)
+    private Double receita_igrediente_quantidade;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "cliente_user_fk")
-    private User user;
+    @JoinColumn(name = "receita_igrediente_receita_fk")
+    private Receita receita;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "receita_igrediente_igrediente_fk")
+    private Igrediente igrediente;
+
+    
     
 }
