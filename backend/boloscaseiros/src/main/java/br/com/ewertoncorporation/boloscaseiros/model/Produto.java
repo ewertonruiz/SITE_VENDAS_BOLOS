@@ -5,7 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import lombok.*;
 
@@ -37,6 +38,6 @@ public class Produto {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "produto_tipo_produto_fk")
-    private Tipo_Produto tipo_produto;
+    private TipoProduto tipo_produto;
     
 }

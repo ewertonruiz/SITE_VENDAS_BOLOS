@@ -5,7 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import lombok.*;
 
@@ -25,15 +26,15 @@ public class Bolo {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "bolo_sabor_receita_fk")
-    private Receita receita;
+    private Receita receita_sabor;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "bolo_sabor_recheio_receita_fk")
-    private Receita receita;
+    private Receita receita_recheio;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "bolo_cobertura_receita_fk")
-    private Receita receita;
+    private Receita receita_cobertura;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "bolo_produto_fk")

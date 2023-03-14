@@ -5,8 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+
 
 import lombok.*;
 
@@ -14,15 +13,14 @@ import lombok.*;
 @Setter
 @Entity
 
-public class Vendedor {
+public class TipoProduto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
-    private Long vendedor_id;
+    private Long tipo_produto_id;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "vendedor_user_fk")
-    private Usuario usuario;
+    @Column(nullable = false)
+    private String tipo_produto_nome;
     
 }

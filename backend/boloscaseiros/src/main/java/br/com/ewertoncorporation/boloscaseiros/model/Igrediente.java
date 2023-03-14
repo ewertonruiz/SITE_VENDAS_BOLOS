@@ -5,7 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import lombok.*;
 
@@ -31,6 +32,6 @@ public class Igrediente {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "igrediente_unidade_medida_fk")
-    private Unidade_Mediada unidade_medida;
+    private UnidadeMedida unidade_medida;
     
 }
