@@ -21,6 +21,6 @@ public class TipoUsuario {
     private Long tipo_usuario_id;
 
     @Column(nullable = false)
-    private String tipo_usario_nome;
+    private String tipo_usuario_nome;
     
 }
