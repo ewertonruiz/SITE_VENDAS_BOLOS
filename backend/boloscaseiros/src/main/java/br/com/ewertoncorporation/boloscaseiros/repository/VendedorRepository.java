@@ -11,7 +11,7 @@ import br.com.ewertoncorporation.boloscaseiros.model.Vendedor;
 
 public interface VendedorRepository extends JpaRepository<Vendedor, Long> {
 
-    @Query("SELECT vd FROM Vendedor vd WHERE vd.id MESMO %?1%")
-    List<Vendedor> findByAll(Long id);
+    @Query("SELECT vd FROM Vendedor vd WHERE vd.vendedor_id = %?1%")
+    List<Vendedor> findByAll(String id);
 
 }

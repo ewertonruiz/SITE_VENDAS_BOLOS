@@ -10,7 +10,7 @@ import br.com.ewertoncorporation.boloscaseiros.model.Venda;
 
 public interface VendaRepository extends JpaRepository<Venda, Long> {
 
-    @Query("SELECT ve FROM Venda ve WHERE ve.id MESMO %?1%")
-    List<Venda> findByAll(Long id);
+    @Query("SELECT ve FROM Venda ve WHERE ve.venda_id = %?1%")
+    List<Venda> findByAll(String id);
 
 }

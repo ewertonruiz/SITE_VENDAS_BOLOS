@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import br.com.ewertoncorporation.boloscaseiros.model.Igrediente;
 
 
-public interface IgredienteRepository extends JpaRepository<Igrediente, String> {
+public interface IgredienteRepository extends JpaRepository<Igrediente, Long> {
 
     @Query("SELECT ig FROM Igrediente ig WHERE ig.igrediente_nome LIKE %?1%")
     List<Igrediente> findByAll(String nome);

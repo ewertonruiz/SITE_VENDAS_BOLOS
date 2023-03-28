@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import br.com.ewertoncorporation.boloscaseiros.model.UnidadeMedida;
 
 
-public interface UnidadeMedidaRepository extends JpaRepository<UnidadeMedida, String> {
+public interface UnidadeMedidaRepository extends JpaRepository<UnidadeMedida, Long> {
 
     @Query("SELECT um FROM UnidadeMedida um WHERE um.unidade_medida_nome LIKE %?1%")
     List<UnidadeMedida> findByAll(String nome);
