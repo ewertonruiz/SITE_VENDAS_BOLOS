@@ -11,7 +11,7 @@ import br.com.ewertoncorporation.boloscaseiros.model.Endereco;
 
 public interface EnderecoRepository extends JpaRepository<Endereco, Long> {
 
-    @Query("SELECT en FROM Endereco en WHERE en.endereco_id MESMO %?1%")
-    List<Endereco> findByAll(String id);
+    @Query("SELECT en FROM Endereco en WHERE en.endereco_id = ?1")
+        Endereco findByAll(String id);
 
 }

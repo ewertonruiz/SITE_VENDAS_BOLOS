@@ -11,7 +11,7 @@ import br.com.ewertoncorporation.boloscaseiros.model.Cliente;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 
-    @Query("SELECT cl FROM Cliente bi WHERE cl.cliente_id = %?1%")
-    List<Cliente> findByAll(String id);
+    @Query("SELECT cl FROM Cliente cl WHERE cl.cliente_id = ?1")
+        Cliente findByAll(String id);
 
 }

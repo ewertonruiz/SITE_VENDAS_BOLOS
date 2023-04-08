@@ -33,7 +33,7 @@ public class VendedorService implements ICrudService<Vendedor> {
     @Override
     public List<Vendedor> getByAll(String termoBusca) {
 
-        return repo.findByAll(termoBusca);
+        return null;
     }
 
     @Override

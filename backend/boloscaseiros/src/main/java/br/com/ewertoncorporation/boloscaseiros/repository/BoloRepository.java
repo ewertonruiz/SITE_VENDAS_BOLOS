@@ -10,7 +10,7 @@ import br.com.ewertoncorporation.boloscaseiros.model.Bolo;
 
 public interface BoloRepository extends JpaRepository<Bolo, Long> {
 
-    @Query("SELECT bi FROM Bolo bi WHERE bi.bolo_id = %?1%")
-    List<Bolo> findByAll(String id);
+    @Query("SELECT bi FROM Bolo bi WHERE bi.bolo_id = ?1")
+    Bolo findByAll(String id);
 
 }

@@ -32,8 +32,7 @@ public class ClienteService implements ICrudService<Cliente> {
 
     @Override
     public List<Cliente> getByAll(String termoBusca) {
-
-        return repo.findByAll(termoBusca);
+        return null;
     }
 
     @Override

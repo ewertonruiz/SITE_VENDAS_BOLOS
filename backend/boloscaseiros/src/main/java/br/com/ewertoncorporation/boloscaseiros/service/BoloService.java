@@ -33,7 +33,7 @@ public class BoloService implements ICrudService<Bolo> {
     @Override
     public List<Bolo> getByAll(String termoBusca) {
 
-        return repo.findByAll(termoBusca);
+        return null;
     }
 
     @Override

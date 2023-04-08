@@ -33,7 +33,7 @@ public class EnderecoService implements ICrudService<Endereco> {
     @Override
     public List<Endereco> getByAll(String termoBusca) {
 
-        return repo.findByAll(termoBusca);
+        return null;
     }
 
     @Override
